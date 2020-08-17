@@ -1,0 +1,36 @@
+html {
+  font-size: 10px;
+}
+
+body {
+  font-size: 1.6rem;
+  @extend %font-prim;
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, p {
+  margin: 0;
+}
+
+h1 {
+  @include font(50px, 54px, bold);
+}
+
+h2 {
+  @include font(36px, 40px, normal);
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.wrapper {
+  margin: auto;
+  padding: 0 50px;
+}
+
+.container{
+  position: relative;
+  padding: 51px 0;
+}

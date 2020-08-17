@@ -1,0 +1,58 @@
+.switcher {
+  position: relative;
+  width: 10.3rem;
+}
+.switcher__checkbox {
+  display: none;
+}
+.switcher__label {
+  display: block; 
+  overflow: hidden; 
+  cursor: pointer;
+  border: .2rem solid #000000; 
+  border-radius: 2rem;
+}
+.switcher__inner {
+  display: block; 
+  width: 200%; 
+  margin-left: -100%;
+  transition: margin 0.3s ease-in 0s;
+}
+.switcher__inner:before, .switcher__inner:after {
+  display: block;
+  float: left;
+  width: 50%;
+  height: 3.8rem;
+  @include font(1.8rem, 4.1rem, bold);
+  box-sizing: border-box;
+}
+.switcher__inner:before {
+  content: "TRAIN";
+  padding-left: 1rem;
+  background: $color-train;
+}
+.switcher__inner:after {
+  content: "PLAY";
+  padding-right: 1.4rem;
+  background: $color-play;
+  text-align: right;
+}
+.switcher__switch {
+  display: block;
+  width: 2.5rem; 
+  margin: .65rem;
+  background: #FFFFFF;
+  position: absolute; 
+  top: 0; 
+  bottom: 0;
+  right: 6.1rem;
+  border: .2rem solid #000000; 
+  border-radius: 50%;
+  transition: all 0.3s ease-in 0s; 
+}
+.switcher__checkbox:checked + .switcher__label .switcher__inner {
+  margin-left: 0;
+}
+.switcher__checkbox:checked + .switcher__label .switcher__switch {
+  right: 0; 
+}

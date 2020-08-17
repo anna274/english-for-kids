@@ -1,0 +1,31 @@
+.hamburger {
+  position: absolute;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 35px;
+  height: 30px;
+  z-index: 1500;
+  cursor: pointer;
+
+  &__line {
+    width: 100%;
+    height: 3px;
+    background-color: black;
+    border-radius: 3px;
+  
+    transition: all 0.4s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+  }
+}
+
+.active .line-1 {
+  transform: rotateZ(-45deg) translate(-8px, 6px);
+}
+
+.active .line-2 {
+  opacity: 0;
+}
+
+.active .line-3 {
+  transform: rotateZ(45deg) translate(-8px, -6px);
+}

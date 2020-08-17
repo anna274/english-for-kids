@@ -1,0 +1,36 @@
+.navigation {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation__link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  padding: 0 50px;
+  box-sizing: border-box;
+  @include font(30px, 50px, normal);
+  @extend %transition;
+  list-style: none;
+  cursor: pointer;
+
+  .navigation__icon {
+    margin-right: 10px;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+}
+
+.navigation__link.active {
+  background-color: rgba(255, 255, 255, 0.5);
+}

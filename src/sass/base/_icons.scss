@@ -1,0 +1,27 @@
+.icon {
+  display: block;
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.icon-rotate {
+  width: 30px;
+  height: 30px;
+  background-image: url('../assets/img/icons/rotate.svg');
+}
+
+.icon-star {
+  width: 30px;
+  height: 30px;
+  background-image: url('../assets/img/icons/star.svg');
+}
+
+.icon-star-failure {
+  width: 30px;
+  height: 30px;
+  background-image: url('../assets/img/icons/star-failure.svg');
+}
+

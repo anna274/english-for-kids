@@ -1,0 +1,55 @@
+.header {
+  position: relative;
+  padding: 20px 50px;
+  box-shadow: 0px 4px 20px $color-shadow;
+
+  @media (max-width: 700px) {
+    .logo {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .header {
+    padding: 20px 0;
+  }
+}
+
+.header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__navigation {
+  position: absolute;
+  left: -100%;
+  top: 0;
+  z-index: 1000;
+  padding: 95px 0;
+  height: 100vh;
+  transition: all 0.4s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+}
+
+.header__switcher {
+  position: relative;
+}
+
+.header__hamburger {
+  position: relative;
+  width: 35px;
+  height: 30px;
+}
+
+.header__navigation.active {
+  left: 0%;
+}
+
+.header__navigation.train {
+  background: $color-train;
+}
+
+.header__navigation.play {
+  background: $color-play;
+}

@@ -1,0 +1,82 @@
+.play-field {
+  position: absolute;
+  top: 10px;
+  width: 100%;
+  padding: 0 90px;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  transition: all .6px linear;
+}
+
+.play-field.train {
+  visibility: hidden;
+}
+
+.play-field.play {
+  visibility: visible;
+  transition: all .6px linear;
+}
+
+.button {
+  display: block;
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid #000000;
+  @include font(2.5rem, 3rem, bold);
+  cursor: pointer;
+}
+
+.play-field__buttons {
+  display: flex;
+  flex-direction: row;
+}
+
+.button_start {
+  background: linear-gradient(#ffe921, #ff9a04);
+
+  &:hover {
+    transition: background-color .5s linear;
+    background: linear-gradient(#fff171, #ffbb54);
+  }
+  
+}
+
+.button_start.repeate {
+  background: linear-gradient(#31beb7, #40fcb4);
+  &:hover {
+    transition: background-color .5s linear;
+    background: linear-gradient(#69ece6, #6cfdc5);
+  }
+}
+
+.count-field {
+  width: 35%;
+  height: 50px;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 2px solid rgb(65, 65, 65);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  overflow: hidden;
+
+  & > * {
+    margin-right: 10px;
+  }
+
+  &::last-child {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 700px) {
+  .play-field {
+    padding: 0 20px;
+  }
+}
+
